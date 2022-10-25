@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+:root{
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #888;
+
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    place-content: space-around;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+body{
+    background-image: linear-gradient(to bottom, rgba(102,3,113,1), rgba(4,16,83,1));
+    background-attachment: fixed;
+    font-family: 'Lexend', sans-serif;
+}
+h1{
+    color: #ffff;
+    z-index: 99999;
+    height: 5vh;
+    margin-top: 70px;
+    font-weight: 900;
+}
+
+div#groups{
+    width: 95%;
+    height: 80vh;
+
+    padding: 10px;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: 1fr 48px 48px 48px 48px;
+    justify-content: space-evenly;
+    align-items: start;
+    justify-items: center;
+}
+
+
+div#groups div{
+    background-color: #82b4d6;
+    width: 200px;
+    height: 40vh;
+
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px  #85848470;
+}
+div#groups div ul li{
+    list-style: none;
+    padding: 20px;
+}
+
+div#groups div ul:nth-child(1){
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+div#one{
+    display: flex;
+}
+
+
