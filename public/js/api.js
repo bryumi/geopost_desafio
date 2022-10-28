@@ -1,13 +1,22 @@
 const url = 'https://estagio.geopostenergy.com/WorldCup/GetAllTeams'
 let groupOne = [];
+let one = 'Grupo 1';
 let groupTwo = [];
+let two = 'Grupo 2';
 let groupThree = [];
+let three = 'Grupo 3';
 let groupFour = [];
+let four = 'Grupo 4';
 let groupFive = [];
+let five = 'Grupo 5';
 let groupSix = [];
+let six = 'Grupo 6';
 let groupSeven = [];
-let groupEight = [];
+let seven = 'Grupo 7'
+let groupEigth = [];
+let eigth = 'Grupo 8'
 let sortedNumbers = [];
+
 
 function makeTeams(group, array) {
     for (let i = 0; i < 4; i++) {
@@ -39,7 +48,22 @@ function randomTeams(array) {
     makeTeams(groupFive, array);
     makeTeams(groupSix, array);
     makeTeams(groupSeven, array);
-    makeTeams(groupEight, array);
+    makeTeams(groupEigth, array);
+}
+function  addTeams(group, div) {
+    
+    let expositor = document.getElementById(div)
+    let ul = document.createElement("ul");
+    expositor.appendChild(ul);
+    let li = document.createElement("li");  
+    ul.appendChild(li) 
+    li.innerText = div
+    
+    for(let i = 0; i<group.length; i++){
+        let li = document.createElement("li");  
+        ul.appendChild(li)  
+        li.innerText = group[i].Name
+    }  
 }
 async function getTeams() {
     try {
@@ -54,8 +78,14 @@ async function getTeams() {
         const list = jsonData.Result
 
         randomTeams(list)
-        console.log(groupOne, groupTwo, groupThree, groupFour, groupFive, groupSix,
-            groupSeven, groupEight, sortedNumbers)
+       addTeams(groupOne, one)
+       addTeams(groupTwo, two)
+       addTeams(groupThree, three)
+       addTeams(groupFour, four)
+       addTeams(groupFive, five)
+       addTeams(groupSix, six)
+       addTeams(groupSeven, seven)
+       addTeams(groupEigth, eigth)
 
     } catch (e) {
         console.log("ERRO!")
@@ -64,16 +94,6 @@ async function getTeams() {
 
 getTeams()
 
-function addTeams(){
-    let li = document.createElement("li");
-    let text = document.createTextNode(`${groupOne[i].name}`);
-    li.appendChild(text);
-    document.getElementById('numberOne').appendChild(li);
-    
-    for(let i = 0; i<groupOne.length; i++){
-        let li = document.createElement("li")
-        li.appendChild(document.createTextNode(`${groupOne[i].name}`));
-        document.getElementById('numberOne').appendChild(li);
-    }
-}
-addTeams()
+
+
+
