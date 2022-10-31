@@ -1,5 +1,6 @@
-#Estágio-Geopost
-###Simulador de jogos Copa do Mundo 2022
+# Estágio-Geopost
+
+## Simulador de jogos Copa do Mundo 2022
 <hr>
 
 ### Como rodar o projeto:
